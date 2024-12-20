@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Food and Restaurant</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body & General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Navbar */
+        nav {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo h1 {
+            font-size: 2rem;
+        }
+
+        nav .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        nav .nav-links li {
+            margin-left: 20px;
+        }
+
+        nav .nav-links li a {
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Menu Section */
+        #menu {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 250px;
+            background-color: #fff;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .menu-item p {
+            margin: 10px 0;
+        }
+
+        .menu-item span {
+            font-weight: bold;
+            color: #d9534f;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        /* Contact Form */
+        #contact {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form input, form button {
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #444;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-items {
+                flex-direction: column;
+            }
+
+            .menu-item {
+                width: 100%;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            nav .nav-links {
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            nav .nav-links li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h1>Responsive Food</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Homepage Section -->
+    <section id="home">
+        <div class="hero">
+            <h2>Welcome to Responsive Food and Restaurant!</h2>
+            <p>Delicious meals crafted to satisfy your cravings. Come dine with us!</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Pizza">
+                <h3>Pizza Margherita</h3>
+                <p>Classic pizza with fresh mozzarella, tomatoes, and basil.</p>
+                <span>$12.99</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Pasta">
+                <h3>Spaghetti Carbonara</h3>
+                <p>Traditional Italian pasta with eggs, cheese, and pancetta.</p>
+                <span>$14.99</span>
+            </div>
+            <div class="menu-item">
+                <img src="https://via.placeholder.com/250x150" alt="Salad">
+                <h3>Caesar Salad</h3>
+                <p>Fresh romaine lettuce with Caesar dressing and croutons.</p>
+                <span>$9.99</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Responsive Food and Restaurant, we pride ourselves on offering delicious and high-quality dishes that cater to your taste buds. Our chefs use fresh ingredients to bring you the best dining experience.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="reservation-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Reservation Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Make a Reservation</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Responsive Food and Restaurant. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Simple reservation form handler
+        document.getElementById('reservation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('date').value;
+
+            if (name && email && date) {
+                alert(`Thank you for your reservation, ${name}! We will confirm your reservation on ${date}.`);
+            } else {
+                alert('Please fill out all fields!');
+            }
+        });
+    </script>
+
+</body>
+</html>
